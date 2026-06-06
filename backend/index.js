@@ -65,8 +65,8 @@ app.post("/sendmail",function(req,res){
 
 })
 
-cd
+const PORT = process.env.PORT || 5000  
 
-app.listen(5000,function(){
-    console.log("Server Started...")
+app.listen(PORT, function(){
+    console.log("Server Started on port " + PORT)
 })
