@@ -47,11 +47,13 @@ app.post("/sendmail",function(req,res){
                 resolve("Success")
               }
               catch(error){
+                console.log(error)
                 reject("Failed")
               }
           }).then(function(){
             res.send(true)
-          }).catch(function(){
+          }).catch(function(err){
+            console.log(err)
             res.send(false)
           })
          
